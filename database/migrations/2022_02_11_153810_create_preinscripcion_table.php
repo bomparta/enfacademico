@@ -13,7 +13,7 @@ class CreatePreinscripcionTable extends Migration
      */
     public function up()
     {
-        Schema::create('preinscripcion', function (Blueprint $table) {
+        Schema::create('control_estudio.preinscripcion', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('id_estudiante');
             $table->bigInteger('id_oferta_academica');
@@ -29,6 +29,6 @@ class CreatePreinscripcionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('preinscripcion');
+        Schema::dropIfExists('control_estudio.preinscripcion');
     }
 }

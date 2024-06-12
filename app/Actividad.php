@@ -11,7 +11,7 @@ class Actividad extends Model
 {
     use Notifiable;
 
-    protected $table = 'actividad';
+    protected $table = 'eventos.actividad';
 
 	const CREATED_AT = 'created_at';
         const UPDATED_AT = 'updated_at';

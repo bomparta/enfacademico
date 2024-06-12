@@ -14,7 +14,7 @@ class AddTrabajo extends Migration
     public function up()
     {
         //
-        Schema::table('trabajo', function (Blueprint $table) {
+        Schema::table('control_estudio.trabajo', function (Blueprint $table) {
         $table->bigInteger('id_usuario')->after('id');
             $table->bigInteger('id_lugar_trabajo');
             $table->string('cargo');

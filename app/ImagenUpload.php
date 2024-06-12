@@ -11,7 +11,7 @@ class ImagenUpload extends Model
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';    
     
-    protected $table = 'imagen_uploads';
+    protected $table = 'control_estudio.imagen_uploads';
     /**
      * The attributes that are mass assignable.
      *

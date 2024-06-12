@@ -65,7 +65,7 @@
                     @endif
                     @if(in_array( Auth::user()->id_usuariogrupo, array(4) ))
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('adm')}}">Administración&nbsp;<i class="fa fa-box"></i></a>
+                        <a class="nav-link" href="{{route('listaconciliacion')}}">Administración&nbsp;<i class="fa fa-box"></i></a>
                     </li>
                     @endif
                     @if(in_array( Auth::user()->id_usuariogrupo, array(6) ))
@@ -76,34 +76,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('actividad')}}">Eventos Académicos&nbsp;<i class="fa fa-list"></i></a>
                     </li>
-                    @endif
-                    @if(in_array( Auth::user()->id_usuariogrupo, array(9) ))
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('usuario')}}">Informática&nbsp;<i class="fa fa-box"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('rrhh')}}">Control de Expedientes&nbsp;<i class="fa fa-box"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('vacaciones')}}">Vacaciones&nbsp;<i class="fa fa-box"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('menubienes')}}">Registro y Control de Bienes Nacionales&nbsp;<i class="fa fa-box"></i></a>
-                    </li>
-                    @endif
-                    @if(in_array( Auth::user()->id_usuariogrupo, array(12,11,10,13,12,14,15,16,6,4) ))
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('rrhh')}}">Control de Expedientes&nbsp;<i class="fa fa-box"></i></a>
-                    </li>
-                   <li class="nav-item">
-                        <a class="nav-link" href="{{route('vacaciones')}}">Vacaciones&nbsp;<i class="fa fa-box"></i></a>
-                    </li>
-                    @endif
-                    @if(in_array( Auth::user()->id_usuariogrupo, array(13) ))
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('menubienes')}}">Registro y Control de Bienes Nacionales&nbsp;<i class="fa fa-box"></i></a>
-                    </li>
-                    @endif
+                    @endif                  
                 @endif
                 <button class="navbar-toggler" type="button" data-toggle="collapse" 
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
@@ -168,16 +141,15 @@
             @yield('content')
             
         </main>
-<footer class="px-2 py-2 fixed-bottom bg-dark">
-    <span class="text-muted">Sistema de Gestión de la Escuela Nacional de Fiscales del Ministerio Público. 
-         <i class="fa fa-code text-white">Bompart</i>
-    con
-         <i class="fa fa-code text-white">Colmenares</i>
-    por
-    <a target="_blank" class="text-white" href="http://www.enf.edu.ve">Coordinación de Tecnología</a>
-    &nbsp;
-    </span>
-</footer>
+         <footer class="px-2 py-2 fixed-bottom bg-dark ">
+        <div class="container">
+            <span class="text-primary"  >ENFOCA  Organizar, Controlar y Organizar. .</span>
+            <span class="text-warning font-weight-bold"> Todos los derechos reservados 2023 ©Fundación Escuela Nacional de Fiscales del Ministerio Público </span>
+                 <a target="_blank" class="text-success" href="http://www.enf.edu.ve"></a>         
+            </span>
+            
+        </div>
+    </footer>
  
 </body>
 </html>

@@ -9,7 +9,7 @@ class Alcance extends Model
 {
     use Notifiable;
 
-    protected $table = 'alcance';
+    protected $table = 'eventos.alcance';
     /**
      * The attributes that are mass assignable.
      *

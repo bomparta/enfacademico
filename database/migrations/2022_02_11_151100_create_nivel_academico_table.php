@@ -13,7 +13,7 @@ class CreateNivelAcademicoTable extends Migration
      */
     public function up()
     {
-        Schema::create('nivel_academico', function (Blueprint $table) {
+        Schema::create('control_estudio.nivel_academico', function (Blueprint $table) {
             $table->id();
             $table->string("descripcion");
             $table->timestamps();
@@ -27,6 +27,6 @@ class CreateNivelAcademicoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('nivel_academico');
+        Schema::dropIfExists('control_estudio.nivel_academico');
     }
 }

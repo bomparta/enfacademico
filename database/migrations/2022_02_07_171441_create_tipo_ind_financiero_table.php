@@ -13,7 +13,7 @@ class CreateTipoIndFinancieroTable extends Migration
      */
     public function up()
     {
-        Schema::create('tipo_ind_financiero', function (Blueprint $table) {
+        Schema::create('eventos.tipo_ind_financiero', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('id_ind_financiero');
             $table->string("descripcion");
@@ -29,6 +29,6 @@ class CreateTipoIndFinancieroTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tipo_ind_financiero');
+        Schema::dropIfExists('eventos.tipo_ind_financiero');
     }
 }

@@ -13,7 +13,7 @@ class CreateMatriculaTable extends Migration
      */
     public function up()
     {
-        Schema::create('matricula', function (Blueprint $table) {
+        Schema::create('eventos.matricula', function (Blueprint $table) {
             $table->id();
             $table->string('descripcion');
             $table->smallInteger('status')->default(1);
@@ -28,6 +28,6 @@ class CreateMatriculaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('matricula');
+        Schema::dropIfExists('eventos.matricula');
     }
 }

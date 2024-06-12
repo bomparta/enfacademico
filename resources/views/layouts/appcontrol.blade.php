@@ -109,15 +109,15 @@
                     <!-- Menu Administracion Control Estudio-->
                     @if(in_array( Auth::user()->id_usuariogrupo, array(4) ))
                  
-                    <a href="{{route('adm')}}" class="list-group-item list-group-item-action border-0">
+                    <a href="{{route('admincontrol')}}" class="list-group-item list-group-item-action border-0">
                         <img src="/img/icons-lineal/analiticas.png" class="icon-lg">
                         Valor Unidad Crédito
                     </a>
-                    <a href="{{route('adm')}}" class="list-group-item list-group-item-action border-0">
+                    <a href="{{route('admincontrol')}}" class="list-group-item list-group-item-action border-0">
                         <img src="/img/icons-lineal/analiticas.png" class="icon-lg">
                         Valor Aranceles
                     </a>
-                    <a href="{{route('adm')}}" class="list-group-item list-group-item-action border-0">
+                    <a href="{{route('admincontrol')}}" class="list-group-item list-group-item-action border-0">
                         <img src="/img/icons-lineal/analiticas.png" class="icon-lg">
                         Listado Docente
                     </a>
@@ -133,7 +133,7 @@
                         <img src="/img/icons-lineal/analiticas.png" class="icon-lg">
                         Conciliado Error
                     </a>
-                    <a href="{{route('adm')}}" class="list-group-item list-group-item-action border-0">
+                    <a href="{{route('admincontrol')}}" class="list-group-item list-group-item-action border-0">
                         <img src="/img/icons-lineal/analiticas.png" class="icon-lg">
                         Pagos Adicionales
                     </a>

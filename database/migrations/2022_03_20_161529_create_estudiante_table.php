@@ -13,7 +13,7 @@ class CreateEstudianteTable extends Migration
      */
     public function up()
     {
-        Schema::create('estudiante', function (Blueprint $table) {
+        Schema::create('control_estudio.estudiante', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('id_usuario');
             $table->string('nacionalidad');
@@ -43,6 +43,6 @@ class CreateEstudianteTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('estudiante');
+        Schema::dropIfExists('control_estudio.estudiante');
     }
 }

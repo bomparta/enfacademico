@@ -13,7 +13,7 @@ class CreateAsistenciaTable extends Migration
      */
     public function up()
     {
-        Schema::create('asistencia', function (Blueprint $table) {
+        Schema::create('eventos.asistencia', function (Blueprint $table) {
             $table->id();
             $table->smallInteger('id_actuacion');
             $table->smallInteger('id_persona'); 
@@ -39,6 +39,6 @@ class CreateAsistenciaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('asistencia');
+        Schema::dropIfExists('eventos.asistencia');
     }
 }

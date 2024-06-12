@@ -13,7 +13,7 @@ class CreateSeccionTable extends Migration
      */
     public function up()
     {
-        Schema::create('seccion', function (Blueprint $table) {
+        Schema::create('control_estudio.seccion', function (Blueprint $table) {
             $table->id();
             $table->string("descripcion");
             $table->timestamps();
@@ -27,6 +27,6 @@ class CreateSeccionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('seccion');
+        Schema::dropIfExists('control_estudio.seccion');
     }
 }

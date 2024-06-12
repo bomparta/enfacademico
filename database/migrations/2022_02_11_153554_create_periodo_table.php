@@ -13,7 +13,7 @@ class CreatePeriodoTable extends Migration
      */
     public function up()
     {
-        Schema::create('periodo', function (Blueprint $table) {
+        Schema::create('control_estudio.periodo', function (Blueprint $table) {
             $table->id();
             $table->string("nombre");
             $table->smallInteger('status')->default(1)->comment('1 activo / 0 inactivo');
@@ -29,6 +29,6 @@ class CreatePeriodoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('periodo');
+        Schema::dropIfExists('control_estudio.periodo');
     }
 }

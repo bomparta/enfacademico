@@ -13,7 +13,7 @@ class CreateTiempoPreinscripcionTable extends Migration
      */
     public function up()
     {
-        Schema::create('tiempo_preinscripcion', function (Blueprint $table) {
+        Schema::create('control_estudio.tiempo_preinscripcion', function (Blueprint $table) {
             $table->id();
             $table->date("fecha_inicio");
             $table->time("hora_inicio");
@@ -31,6 +31,6 @@ class CreateTiempoPreinscripcionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tiempo_preinscripcion');
+        Schema::dropIfExists('control_estudio.tiempo_preinscripcion');
     }
 }

@@ -9,7 +9,7 @@ class Tematica extends Model
 {
     use Notifiable;
 
-    protected $table = 'tematica';
+    protected $table = 'eventos.tematica';
     /**
      * The attributes that are mass assignable.
      *

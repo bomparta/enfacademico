@@ -13,7 +13,7 @@ class CreateActuacionTable extends Migration
      */
     public function up()
     {
-        Schema::create('actuacion', function (Blueprint $table) {
+        Schema::create('eventos.actuacion', function (Blueprint $table) {
             $table->id();
             $table->integer("id_actividad");
             $table->string("cod_actividad");
@@ -50,6 +50,6 @@ class CreateActuacionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('actuacion');
+        Schema::dropIfExists('eventos.actuacion');
     }
 }

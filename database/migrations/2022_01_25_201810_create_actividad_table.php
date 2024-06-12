@@ -13,7 +13,7 @@ class CreateActividadTable extends Migration
      */
     public function up()
     {
-        Schema::create('actividad', function (Blueprint $table) {
+        Schema::create('eventos.actividad', function (Blueprint $table) {
             $table->id();
             $table->string("codigo");
             $table->smallInteger('anio');
@@ -43,6 +43,6 @@ class CreateActividadTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('actividad');
+        Schema::dropIfExists('eventos.actividad');
     }
 }

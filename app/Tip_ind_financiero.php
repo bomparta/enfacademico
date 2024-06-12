@@ -11,7 +11,7 @@ class Tip_ind_financiero extends Model
      //
      use Notifiable;
 
-     protected $table = 'tipo_ind_financiero';
+     protected $table = 'eventos.tipo_ind_financiero';
      /**
       * The attributes that are mass assignable.
       *

@@ -13,7 +13,7 @@ class CreateMateriasPreinscritasTable extends Migration
      */
     public function up()
     {
-        Schema::create('materias_preinscritas', function (Blueprint $table) {
+        Schema::create('control_estudio.materias_preinscritas', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('id_usuario');
             $table->bigInteger('id_oferta_academica');
@@ -34,6 +34,6 @@ class CreateMateriasPreinscritasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('materias_preinscritas');
+        Schema::dropIfExists('control_estudio.materias_preinscritas');
     }
 }

@@ -13,7 +13,7 @@ class CreateTrabajoTable extends Migration
      */
     public function up()
     {
-        Schema::create('trabajo', function (Blueprint $table) {
+        Schema::create('control_estudio.trabajo', function (Blueprint $table) {
             $table->id();
            
             $table->timestamps();
@@ -27,6 +27,6 @@ class CreateTrabajoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('trabajo');
+        Schema::dropIfExists('control_estudio.trabajo');
     }
 }

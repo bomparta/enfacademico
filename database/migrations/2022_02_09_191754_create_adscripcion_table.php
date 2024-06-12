@@ -13,7 +13,7 @@ class CreateAdscripcionTable extends Migration
      */
     public function up()
     {
-        Schema::create('adscripcion', function (Blueprint $table) {
+        Schema::create('eventos.adscripcion', function (Blueprint $table) {
             $table->id();
             $table->string('descripcion');//donde pertenece la persona 
             $table->smallInteger('status')->default(1);
@@ -28,6 +28,6 @@ class CreateAdscripcionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('adscripcion');
+        Schema::dropIfExists('eventos.adscripcion');
     }
 }

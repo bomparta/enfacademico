@@ -10,7 +10,7 @@ class Participantes extends Model
 {
     use Notifiable;
 
-    protected $table = 'actuacion_participantes';
+    protected $table = 'eventos.actuacion_participantes';
 
 	const CREATED_AT = 'created_at';
         const UPDATED_AT = 'updated_at';

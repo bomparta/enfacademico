@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Sistema de Gestion ENFMP'),
+    'name' => env('APP_NAME', 'ENFOCA Organizar,Controlar y Automatizar'),
 
     /*
     |--------------------------------------------------------------------------

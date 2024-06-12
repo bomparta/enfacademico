@@ -13,7 +13,7 @@ class CreateEjeTable extends Migration
      */
     public function up()
     {
-        Schema::create('eje', function (Blueprint $table) {
+        Schema::create('control_estudio.eje', function (Blueprint $table) {
             $table->id();
             $table->string("nombre");
             $table->timestamps();
@@ -23,10 +23,11 @@ class CreateEjeTable extends Migration
     /**
      * Reverse the migrations.
      *
+     * 
      * @return void
      */
     public function down()
     {
-        Schema::dropIfExists('eje');
+        Schema::dropIfExists('control_estudio.eje');
     }
 }

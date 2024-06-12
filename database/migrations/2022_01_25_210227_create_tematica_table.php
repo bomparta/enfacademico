@@ -13,7 +13,7 @@ class CreateTematicaTable extends Migration
      */
     public function up()
     {
-        Schema::create('tematica', function (Blueprint $table) {
+        Schema::create('eventos.tematica', function (Blueprint $table) {
             $table->id();
             $table->string("descripcion");
             $table->smallInteger('status');
@@ -28,6 +28,6 @@ class CreateTematicaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tematica');
+        Schema::dropIfExists('eventos.tematica');
     }
 }

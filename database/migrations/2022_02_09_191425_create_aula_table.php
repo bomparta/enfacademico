@@ -13,7 +13,7 @@ class CreateAulaTable extends Migration
      */
     public function up()
     {
-        Schema::create('aula', function (Blueprint $table) {
+        Schema::create('eventos.aula', function (Blueprint $table) {
             $table->id();
             $table->string('descripcion');
  	        $table->smallInteger('capacidad');
@@ -29,6 +29,6 @@ class CreateAulaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('aula');
+       Schema::dropIfExists('eventos.aula');
     }
 }

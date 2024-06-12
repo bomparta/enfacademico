@@ -13,7 +13,7 @@ class CreateViaticosTable extends Migration
      */
     public function up()
     {
-        Schema::create('viaticos', function (Blueprint $table) {
+        Schema::create('eventos.viaticos', function (Blueprint $table) {
             $table->id();
             $table->string("descripcion");
             $table->smallInteger('status');
@@ -28,6 +28,6 @@ class CreateViaticosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('viaticos');
+        Schema::dropIfExists('eventos.viaticos');
     }
 }

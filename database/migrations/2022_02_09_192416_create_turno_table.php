@@ -13,7 +13,7 @@ class CreateTurnoTable extends Migration
      */
     public function up()
     {
-        Schema::create('turno', function (Blueprint $table) {
+        Schema::create('eventos.turno', function (Blueprint $table) {
             $table->id();
             $table->string('descripcion');
             $table->smallInteger('status')->default(1);
@@ -28,6 +28,6 @@ class CreateTurnoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('turno');
+       Schema::dropIfExists('eventos.turno');
     }
 }

@@ -9,7 +9,7 @@ class Actuacion extends Model
 {
     use Notifiable;
 
-    protected $table = 'actuacion';
+    protected $table = 'eventos.actuacion';
 
 	const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';

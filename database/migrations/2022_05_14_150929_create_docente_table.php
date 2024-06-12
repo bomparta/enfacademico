@@ -13,7 +13,7 @@ class CreateDocenteTable extends Migration
      */
     public function up()
     {
-        Schema::create('docente', function (Blueprint $table) {
+        Schema::create('control_estudio.docente', function (Blueprint $table) {
             $table->id();
             $table->string('nacionalidad');
             $table->string('cedula');
@@ -40,6 +40,6 @@ class CreateDocenteTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('docente');
+        Schema::dropIfExists('control_estudio.docente');
     }
 }

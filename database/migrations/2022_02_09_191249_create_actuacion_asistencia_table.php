@@ -13,7 +13,7 @@ class CreateActuacionAsistenciaTable extends Migration
      */
     public function up()
     {
-        Schema::create('actuacion_asistencia', function (Blueprint $table) {
+        Schema::create('eventos.actuacion_asistencia', function (Blueprint $table) {
             $table->id();
             $table->smallInteger('id_actuacion');
             $table->smallInteger('id_actuacion_participante'); 
@@ -30,6 +30,6 @@ class CreateActuacionAsistenciaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('actuacion_asistencia');
+        Schema::dropIfExists('eventos.actuacion_asistencia');
     }
 }

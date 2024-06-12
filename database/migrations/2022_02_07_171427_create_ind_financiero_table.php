@@ -13,7 +13,7 @@ class CreateIndFinancieroTable extends Migration
      */
     public function up()
     {
-        Schema::create('ind_financiero', function (Blueprint $table) {
+        Schema::create('eventos.ind_financiero', function (Blueprint $table) {
             $table->id();
             $table->string("descripcion");
             $table->smallInteger('status');
@@ -28,6 +28,6 @@ class CreateIndFinancieroTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ind_financiero');
+        Schema::dropIfExists('eventos.ind_financiero');
     }
 }

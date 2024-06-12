@@ -10,7 +10,7 @@ class Facilitadores extends Model
 {
     use Notifiable;
 
-    protected $table = 'actuacion_ponentes';
+    protected $table = 'control_estudio.actuacion_ponentes';
 
 	const CREATED_AT = 'created_at';
         const UPDATED_AT = 'updated_at';

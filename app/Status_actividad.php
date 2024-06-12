@@ -10,7 +10,7 @@ class Status_actividad extends Model
     //
     use Notifiable;
 
-    protected $table = 'status_actividad';
+    protected $table = 'eventos.status_actividad';
     /**
      * The attributes that are mass assignable.
      *

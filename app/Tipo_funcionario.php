@@ -10,7 +10,7 @@ class Tipo_funcionario extends Model
     //
     use Notifiable;
 
-    protected $table = 'tipo_funcionario';
+    protected $table = 'eventos.tipo_funcionario';
     /**
      * The attributes that are mass assignable.
      *

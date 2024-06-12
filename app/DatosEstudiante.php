@@ -9,7 +9,7 @@ class DatosEstudiante extends Model
 {
     use Notifiable;
 
-    protected $table = 'estudiante';
+    protected $table = 'control_estudio.estudiante';
 
 	    const CREATED_AT = 'created_at';
         const UPDATED_AT = 'updated_at';

@@ -13,7 +13,7 @@ class CreatePensumTable extends Migration
      */
     public function up()
     {
-        Schema::create('pensum', function (Blueprint $table) {
+        Schema::create('control_estudio.pensum', function (Blueprint $table) {
             $table->id();
             $table->string("nombre");
             $table->string("sigla_uc");
@@ -36,6 +36,6 @@ class CreatePensumTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pensum');
+        Schema::dropIfExists('control_estudio.pensum');
     }
 }

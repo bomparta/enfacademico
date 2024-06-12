@@ -13,7 +13,7 @@ class CreateOfertaAcademicaTable extends Migration
      */
     public function up()
     {
-        Schema::create('oferta_academica', function (Blueprint $table) {
+        Schema::create('control_estudio.oferta_academica', function (Blueprint $table) {
             $table->id();
             $table->date('fecha_inicio');
             $table->date('fecha_fin');
@@ -45,6 +45,6 @@ class CreateOfertaAcademicaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('oferta_academica');
+        Schema::dropIfExists('control_estudio.oferta_academica');
     }
 }

@@ -29,6 +29,6 @@ class CreateImagenUploadsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('imagen_uploads');
+       Schema::dropIfExists('control_estudio.imagen_uploads');
     }
 }

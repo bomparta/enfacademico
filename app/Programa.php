@@ -9,7 +9,7 @@ class Programa extends Model
 {
     use Notifiable;
 
-    protected $table = 'programa';
+    protected $table = 'control_estudio.programa';
 
 	    const CREATED_AT = 'created_at';
         const UPDATED_AT = 'updated_at';

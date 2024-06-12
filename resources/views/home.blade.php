@@ -66,7 +66,7 @@
         </a>
         @endif
         @if(in_array( Auth::user()->id_usuariogrupo, array(4) ))
-        <a style="color: black;" href="{{route('adm')}}">
+        <a style="color: black;" href="{{route('listaconciliacion')}}">
             <div class="card text-center">
                 <img src="{{url('/img/administracion.jpeg')}}" class="card-img-top">
                 <div class="card-body">
@@ -101,33 +101,7 @@
                     <h1 class="card-title">Informática</h1>
                 </div>
             </div>
-        </a>
-        <a style="color: black;" href="{{route('rrhh')}}">
-            <div class="card text-center">
-                <img src="{{url('/img/rrhh.png')}}" class="card-img-top">
-                <div class="card-body">
-                    <h1 class="card-title"></h1>
-                    <h1 class="card-title">Control</h1>
-                    <h1 class="card-title">Expedientes RRHH</h1>
-                </div>
-            </div>
-        </a>
-        <a style="color: black;" href="{{route('vacaciones')}}">
-            <div class="card text-center">
-                <img src="{{url('/img/vacacion.png')}}" class="card-img-top">
-                <div class="card-body">
-                    <h1 class="card-title">Vacaciones</h1>
-                </div>
-            </div>
-        </a> 
-        <a style="color: black;" href="{{route('menubienes')}}">
-            <div class="card text-center">
-                <img src="{{url('/img/bienes.jpeg')}}" class="card-img-top">
-                <div class="card-body">
-                    <h1 class="card-title">Bienes Nacionales</h1>
-                </div>
-            </div>
-        </a>
+        </a>       
         @endif
         @if(in_array( Auth::user()->id_usuariogrupo, array(3, 6, 7) ))
         <a style="color: black;" href="{{route('actividad')}}">
@@ -139,42 +113,7 @@
             </div>
         </a>
         @endif
-        @if(in_array( Auth::user()->id_usuariogrupo, array(12,10,11,13,14,15,16,6,4) ))
-        <a style="color: black;" href="{{route('rrhh')}}">
-            <div class="card text-center">
-                <img src="{{url('/img/rrhh.png')}}" class="card-img-top">
-                <div class="card-body">
-                    <h1 class="card-title"></h1>
-                    <h1 class="card-title">Control</h1>
-                    <h1 class="card-title">Expedientes RRHH</h1>
-                </div>
-            </div>
-        </a>
-        <a style="color: black;" href="{{route('vacaciones')}}">
-            <div class="card text-center">
-                <img src="{{url('/img/vacacion.png')}}" class="card-img-top">
-                <div class="card-body">
-                    <h1 class="card-title">Vacaciones</h1>
-                </div>
-            </div>
-        </a>
-        @endif
-        @if(in_array( Auth::user()->id_usuariogrupo, array(13) ))
-        <a style="color: black;" href="{{route('menubienes')}}">
-            <div class="card text-center">
-                <img src="{{url('/img/bienes.jpeg')}}" class="card-img-top">
-                <div class="card-body">
-                    <h1 class="card-title">Bienes Nacionales</h1>
-                </div>
-            </div>
-        </a>
-        @endif
-        <!--
-        <div class="title m-b-md">
-            {!!QrCode::size(100)->generate("www.nigmacode.com") !!}
-            
-         </div>
-        -->
+      
          
     </div>
 </div>

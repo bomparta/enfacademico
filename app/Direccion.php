@@ -9,7 +9,7 @@ class Direccion extends Model
 {
     use Notifiable;
 
-    protected $table = 'direccion';
+    protected $table = 'control._estudio.direccion';
     /**
      * The attributes that are mass assignable.
      *

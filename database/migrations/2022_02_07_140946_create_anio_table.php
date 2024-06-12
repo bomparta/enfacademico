@@ -13,7 +13,7 @@ class CreateAnioTable extends Migration
      */
     public function up()
     {
-        Schema::create('anio', function (Blueprint $table) {
+        Schema::create('eventos.anio', function (Blueprint $table) {
             $table->id();
             $table->smallInteger('anio');
             $table->smallInteger('activos');
@@ -29,6 +29,6 @@ class CreateAnioTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('anio');
+        Schema::dropIfExists('eventos.anio');
     }
 }

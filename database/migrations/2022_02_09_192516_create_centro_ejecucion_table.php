@@ -13,12 +13,13 @@ class CreateCentroEjecucionTable extends Migration
      */
     public function up()
     {
-        Schema::create('centro_ejecucion', function (Blueprint $table) {
+        Schema::create('eventos.centro_ejecucion', function (Blueprint $table) {
             $table->id();
             $table->string('descripcion');
             $table->smallInteger('status')->default(1);
             $table->timestamps();
         });
+
     }
 
     /**
@@ -28,6 +29,6 @@ class CreateCentroEjecucionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('centro_ejecucion');
+      Schema::dropIfExists('eventos.centro_ejecucion');
     }
 }

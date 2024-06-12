@@ -13,7 +13,7 @@ class CreateAlcanceTable extends Migration
      */
     public function up()
     {
-        Schema::create('alcance', function (Blueprint $table) {
+        Schema::create('eventos.alcance', function (Blueprint $table) {
             $table->id();
             $table->string("descripcion");
             $table->smallInteger('status');
@@ -27,6 +27,6 @@ class CreateAlcanceTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('alcance');
+        Schema::dropIfExists('eventos.alcance');
     }
 }

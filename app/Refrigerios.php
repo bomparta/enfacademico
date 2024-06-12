@@ -10,7 +10,7 @@ class Refrigerios extends Model
     //
     use Notifiable;
 
-    protected $table = 'refrigerios';
+    protected $table = 'eventos.refrigerios';
     /**
      * The attributes that are mass assignable.
      *

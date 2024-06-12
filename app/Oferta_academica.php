@@ -9,7 +9,7 @@ class Oferta_academica extends Model
 {
     use Notifiable;
 
-    protected $table = 'oferta_academica';
+    protected $table = 'control_estudio.oferta_academica';
 
 	    const CREATED_AT = 'created_at';
         const UPDATED_AT = 'updated_at';

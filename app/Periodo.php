@@ -9,7 +9,7 @@ class Periodo extends Model
 {
     use Notifiable;
 
-    protected $table = 'periodo';
+    protected $table = 'control_estudio.periodo';
 
 	    const CREATED_AT = 'created_at';
         const UPDATED_AT = 'updated_at';

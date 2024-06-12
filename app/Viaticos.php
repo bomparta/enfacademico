@@ -10,7 +10,7 @@ class Viaticos extends Model
     //
     use Notifiable;
 
-    protected $table = 'viaticos';
+    protected $table = 'eventos.viaticos';
     /**
      * The attributes that are mass assignable.
      *

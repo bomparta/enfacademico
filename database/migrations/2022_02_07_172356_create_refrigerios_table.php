@@ -13,7 +13,7 @@ class CreateRefrigeriosTable extends Migration
      */
     public function up()
     {
-        Schema::create('refrigerios', function (Blueprint $table) {
+        Schema::create('eventos.refrigerios', function (Blueprint $table) {
             $table->id();
             $table->string("descripcion");
             $table->smallInteger('status');
@@ -28,6 +28,6 @@ class CreateRefrigeriosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('refrigerios');
+        Schema::dropIfExists('eventos.refrigerios');
     }
 }

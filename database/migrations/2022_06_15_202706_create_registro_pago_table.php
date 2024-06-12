@@ -13,7 +13,7 @@ class CreateRegistroPagoTable extends Migration
      */
     public function up()
     {
-        Schema::create('registro_pago', function (Blueprint $table) {
+        Schema::create('control_estudio.registro_pago', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('id_usuario');
             $table->bigInteger('id_banco');
@@ -43,6 +43,6 @@ class CreateRegistroPagoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('registro_pago');
+        Schema::dropIfExists('control_estudio.registro_pago');
     }
 }

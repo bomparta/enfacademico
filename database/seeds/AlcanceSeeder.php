@@ -12,7 +12,7 @@ class AlcanceSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('alcance')->insert([
+        DB::table('eventos.alcance')->insert([
             'descripcion' => 'Nacional',
             'status' => '1',
         ]);

@@ -9,7 +9,7 @@ class Docente extends Model
 {
     use Notifiable;
 
-    protected $table = 'docente';
+    protected $table = 'control_estudio.docente';
 
 	    const CREATED_AT = 'created_at';
         const UPDATED_AT = 'updated_at';

@@ -13,7 +13,7 @@ class CreateTratamientoTable extends Migration
      */
     public function up()
     {
-        Schema::create('tratamiento', function (Blueprint $table) {
+        Schema::create('eventos.tratamiento', function (Blueprint $table) {
             $table->id();
             $table->string('descripcion');
             $table->smallInteger('status')->default(1);
@@ -28,6 +28,6 @@ class CreateTratamientoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tratamiento');
+        Schema::dropIfExists('eventos.tratamiento');
     }
 }

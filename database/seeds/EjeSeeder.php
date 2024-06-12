@@ -12,14 +12,14 @@ class EjeSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('eje')->insert([
-            'nombre' => 'Formacion Integral',
+        DB::table('control_estudio.eje')->insert([
+            'nombre' => 'Formación Integral',
         ]);
-        DB::table('eje')->insert([
-            'nombre' => 'Formacion Especializada',
+        DB::table('control_estudio.eje')->insert([
+            'nombre' => 'Formación Especializada',
         ]);
-        DB::table('eje')->insert([
-            'nombre' => 'Formacion en Investigacion',
+        DB::table('control_estudio.eje')->insert([
+            'nombre' => 'Formación en Investigación',
         ]);
     }
 }

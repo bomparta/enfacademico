@@ -1,138 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Sistema de Gestión ENFMP</title>
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-image: url('/img/fondo.jpeg') ;
+    <title>{{ config('app.name', 'Sistema Gestión Académico ENFMP') }}</title>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+    
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/tooltip.css') }}" rel="stylesheet">
+    
+    {!! SEO::generate() !!}
+    <style>
+         
+    body    {
+            background-image: url('/img/fondo.jpeg') ;
+            
+               
+            }
+            .imagen-fondo {         
                 background-repeat: no-repeat;
                 background-size: cover;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
+                background-position: center;  
+                opacity:.8;         
+                display: block;
+                width: 60%;
+                margin: auto;     
+              
             }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
+            div . display: flex;
+          justify-content: space-around;{
                 justify-content: center;
-            }
+                align-items: center;            
 
-            .position-ref {
-                position: relative;
             }
+    </style>  
+</head>
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+<body>
+  
+      
+    <div id="app">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="{{ url('/') }}" title ="Ir A la Página Principal">
+                <img src="{{url('/img/portada.png')}}" width="80" height="80" > Inicio
 
-            .content {
-                text-align: center;
-            }
+                </a>               
+              
+                <button class="navbar-toggler" type="button" data-toggle="collapse" 
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+                aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-            .overlay{
-                background: rgba(0,0,0,0.3);
-                position: fixed;
-                top:0;
-                bottom:0;
-                left:0;
-                right:0;
-                display:flex;            
-                justify-content:center;
-            }
-            .popup{
-                background: #f8f8f8;
-                box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.3);
-                border-radius:3px;
-                padding:20px;
-                width:600px;
-            }
-            .popup .btn-cerrar-popup{
-                display:black;
-                color:#bbbbbb;
-                transition: .3s ease all;
-            }
-            .popup .btn-cerrar-popup:hover{
-               
-                color:#000;
-               
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-
-         
-            <div class="content">
-                <div>
-                    <a href="http://www.enf.edu.ve" target="_new"><img src="{{url('/img/banner.png')}}"  ></a>
-                
-            
-                    <div class="container-fluid">
-                        <strong>"El ente articulador del Ministerio Público en el Sistema de Justicia Venezolano, 
-                            <br>en materia de Función Fiscal que coadyuven en la resolución de problemas<br>en el Sistema de Justicia Penal venezolano."
-                        </strong>
-                        <p>
-                        <hr style=" height: 10px;border-radius: 5px; background-color: #c8c5c5;">
-                        <h2> <strong> <font color=#001958>Sistema de Gestión ENFMP </font></strong></h2> <!--<button >    <img src="{{url('/img/icon/get_info.png')}}" heigth="20px" width="20px"  ></button>-->
-                    </div>
-                        @if (Route::has('login'))
-                            <div class="links" >
-                                @auth
-                               
-                                <a href="{{ url('/home') }}"> <img src="{{url('/img/icon/home.png')}}" heigth="20px" width="20px"  ><strong><font color=#001958> Inicio</strong></font></a>
-                               
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">         
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                        @if (Route::has('login'))                     
+                            @auth
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ url('/home') }}"> <img src="{{url('/img/icon/home.png')}}" heigth="20px" width="20px"  ><strong><font color=#001958> Inicio</strong></font></a>
+                                </li>
                                 @else
-                                
-                                    <a href="{{ route('login') }}" title="Acceso al Sistema Gestión ENFMP"><img src="{{url('/img/icon/users.png')}}" heigth="20px" width="20px"  ><strong> <font color=#001958> Acceso</strong></font></a>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login',1) }}" title="Acceso al Sistema Gestión ENFMP"><img src="{{url('/img/icon/users.png')}}" heigth="20px" width="20px"  ><strong> <font color=#001958> Acceso Personal ENFMP</strong></font></a>
+                                </li>       
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login',2) }}" title="Acceso Estudiante"><img src="{{url('/img/icon/estudiante.png')}}" heigth="20px" width="20px"  ><strong> <font color=#001958> Acceso Estudiante</strong></font></a>
+                                </li>                     
 
-                                    @if (Route::has('register'))
-                                        <a href="{{ route('register') }}" title="Registrar Nuevo Usuario"><strong> <font color=#001958>Registrarse</font></strong></a>
-                                    @endif
-                               
-                                @endauth                        
+                                @if (Route::has('register'))
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
+                                    </li>
+                                @endif
 
-                            </div>
-                        @endif       
+                            @endauth                        
+                            @endif 
+
+                    </ul>
                 </div>
-               <!-- <div class="overlay">
-                    <div class="popup">
-                        <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup">Cerrar</a>
-                     <img src="{{url('/img/icon/home.png')}}" >  
-                    </div>
-                </div>-->
-            </div>
-    </body>
+           
+        </nav>
+        <div class="container">
+          
+        <img src="{{url('/img/portada.png')}}"  class="imagen-fondo" >
+ 
+        </div>
+    <footer class="px-2 py-2 fixed-bottom bg-dark ">
+        <div class="container">
+            <span class="text-primary"  >ENFOCA  Organizar, Controlar y Organizar. .</span>
+            <span class="text-warning font-weight-bold"> Todos los derechos reservados 2023 ©Fundación Escuela Nacional de Fiscales del Ministerio Público </span>
+                 <a target="_blank" class="text-success" href="http://www.enf.edu.ve"></a>         
+            </span>
+            
+        </div>
+    </footer>
+ 
+</body>
 </html>

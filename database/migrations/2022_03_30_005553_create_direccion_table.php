@@ -13,7 +13,7 @@ class CreateDireccionTable extends Migration
      */
     public function up()
     {
-        Schema::create('direccion', function (Blueprint $table) {
+        Schema::create('control_estudio.direccion', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('id_usuario');
             $table->bigInteger('id_estado');
@@ -34,6 +34,6 @@ class CreateDireccionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('direccion');
+        Schema::dropIfExists('control_estudio.direccion');
     }
 }

@@ -13,7 +13,7 @@ class CreateLugarTrabajoTable extends Migration
      */
     public function up()
     {
-        Schema::create('lugar_trabajo', function (Blueprint $table) {
+        Schema::create('control_estudio.lugar_trabajo', function (Blueprint $table) {
             $table->id();
             $table->string("lugar_trabajo");
             $table->smallInteger('descuento')->comment('1 Descuento / 0 no tiene Descuento');
@@ -28,6 +28,6 @@ class CreateLugarTrabajoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lugar_trabajo');
+        Schema::dropIfExists('control_estudio.lugar_trabajo');
     }
 }

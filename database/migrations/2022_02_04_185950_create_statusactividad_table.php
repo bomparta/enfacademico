@@ -13,7 +13,7 @@ class CreateStatusactividadTable extends Migration
      */
     public function up()
     {
-        Schema::create('status_actividad', function (Blueprint $table) {
+        Schema::create('eventos.status_actividad', function (Blueprint $table) {
             $table->id();
             $table->string('descripcion');
             $table->smallInteger('status')->default(1);
@@ -28,6 +28,6 @@ class CreateStatusactividadTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('status_actividad');
+        Schema::dropIfExists('eventos.status_actividad');
     }
 }

@@ -13,7 +13,7 @@ class CreateOrganismoTable extends Migration
      */
     public function up()
     {
-        Schema::create('organismo', function (Blueprint $table) {
+        Schema::create('eventos.organismo', function (Blueprint $table) {
             $table->id();
             $table->string("organismo");
             $table->smallInteger('status');
@@ -28,6 +28,6 @@ class CreateOrganismoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('organismo');
+        Schema::dropIfExists('eventos.organismo');
     }
 }

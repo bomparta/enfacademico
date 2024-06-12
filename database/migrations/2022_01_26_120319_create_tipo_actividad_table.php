@@ -13,7 +13,7 @@ class CreateTipoActividadTable extends Migration
      */
     public function up()
     {
-        Schema::create('tipo_actividad', function (Blueprint $table) {
+        Schema::create('eventos.tipo_actividad', function (Blueprint $table) {
             $table->id();
             $table->string("descripcion");
             $table->smallInteger('status');
@@ -29,6 +29,6 @@ class CreateTipoActividadTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tipo_actividad');
+        Schema::dropIfExists('eventos.tipo_actividad');
     }
 }

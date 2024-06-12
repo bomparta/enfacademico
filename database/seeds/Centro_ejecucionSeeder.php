@@ -12,19 +12,19 @@ class Centro_ejecucionSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('centro_ejecucion')->insert([
+        DB::table('eventos.centro_ejecucion')->insert([
             'descripcion' => 'Interno',
            
         ]);
-        DB::table('centro_ejecucion')->insert([
+        DB::table('eventos.centro_ejecucion')->insert([
             'descripcion' => 'Externo',
            
         ]);
-	    DB::table('centro_ejecucion')->insert([
+	    DB::table('eventos.centro_ejecucion')->insert([
             'descripcion' => 'Convenio Nacional',
            
         ]);
-        DB::table('centro_ejecucion')->insert([
+        DB::table('eventos.centro_ejecucion')->insert([
             'descripcion' => 'Convenio Internacional',
            
         ]);
